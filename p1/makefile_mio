@@ -1,0 +1,40 @@
+all: ejercicio5 ejercicio3 ejercicio2 ejercicio1 ejercicio4 ejercicio5
+
+ejercicio1: ejercicio1.o permutaciones.o
+	    gcc -o ejercicio1 permutaciones.o ejercicio1.o
+ejercicio2: ejercicio2.o permutaciones.o
+	    gcc -o ejercicio2 permutaciones.o ejercicio2.o
+ejercicio3: ejercicio3.o permutaciones.o
+	    gcc -o ejercicio3 permutaciones.o ejercicio3.o
+ejercicio4: ejercicio4.o ordenacion.o permutaciones.o
+	    gcc -o ejercicio4 ordenacion.o permutaciones.o ejercicio4.o
+ejercicio5: ejercicio5.o ordenacion.o permutaciones.o tiempos.o 
+	    gcc -o ejercicio5 ejercicio5.o permutaciones.o ordenacion.o tiempos.o -lm
+
+
+ejercicio1.o: ejercicio1.c
+	      gcc -c -ansi -pedantic  ejercicio1.c
+
+ejercicio2.o: ejercicio2.c
+	      gcc -c -ansi -pedantic  ejercicio2.c
+
+ejercicio3.o: ejercicio3.c
+	      gcc -c -ansi -pedantic  ejercicio3.c
+
+ejercicio4.o: ejercicio4.c
+	      gcc -c -ansi -pedantic  ejercicio4.c
+
+ejercicio5.o: ejercicio5.c
+	      gcc -c -ansi -pedantic  ejercicio5.c
+
+ordenacion.o: ordenacion.c ordenacion.h
+	      gcc -c -ansi -pedantic ordenacion.c
+
+permutaciones.o: permutaciones.c permutaciones.h
+	      gcc -c -ansi -pedantic permutaciones.c
+
+tiempos.o: tiempos.c tiempos.h
+	   gcc  -c -ansi -pedantic tiempos.c
+
+clean:
+	rm -f *.o *.exe
