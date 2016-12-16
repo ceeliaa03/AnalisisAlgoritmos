@@ -8,6 +8,3 @@ plot using 1:2 with lines title "quicksort", using 1:2 with lines title "quic",
 
 plot '/home/alumnos/e337572/examen/quicksort_ip.log' using 1:2 with lines title "quicksort", '/home/alumnos/e337572/examen/insertquick100.log' using 1:2 with lines title "insertquicksort100", '/home/alumnos/e337572/examen/insertquick200.log' using 1:2 with lines title "insertquicksort200", '/home/alumnos/e337572/examen/insertquick300.log' using 1:2 with lines title "insertquicksort300", '/home/alumnos/e337572/examen/insertquick400.log' using 1:2 with lines title "insertquicksort400"
 
-
-plot '/home/alumnos/e337572/examen/quicksort_ip.log' using 1:3 with lines title "quicksort", '/home/alumnos/e337572/examen/insertquick100.log' using 1:3 with lines title "insertquicksort100", '/home/alumnos/e337572/examen/insertquick200.log' using 1:3 with lines title "insertquicksort200", '/home/alumnos/e337572/examen/insertquick300.log' using 1:3 with lines title "insertquicksort300", '/home/alumnos/e337572/examen/insertquick400.log' using 1:3 with lines title "insertquicksort400"
-

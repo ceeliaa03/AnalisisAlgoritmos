@@ -1,0 +1,6 @@
+En los jpegs adjuntos se muestran las gráficas obtenidas para las dos comparaciones: la de tiempo medio de ordenacio, y la de obs medias de ordenacion.
+
+Pese a que las gráfcas muestran que el algoritmo menos eficioente en cuento a tiempo  y obs es quicksort, creo que para ciertos tamaños usar insert sort podria ser optimo, ya que este algotritmo ordena mejor permutaciones de pequeño tamaño.
+
+He usado gnuplot para generar las graficas en os ordenadores del laboratorio con hardwarer: veriton core i3
+
