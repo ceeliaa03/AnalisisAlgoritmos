@@ -185,9 +185,9 @@ int bbin(int *tabla,int P,int U,int clave,int *ppos){
 	if (clave == tabla[medio])
 		*ppos = medio+1;
 	else if(clave < tabla[medio] )
-		ob = 2 + bbin(tabla, P, medio-1, clave, ppos);
+		ob = 2+bbin(tabla, P, medio-1, clave, ppos);
 	else
-		ob = 2 + bbin(tabla, medio+1, U, clave, ppos);
+		ob = 2+bbin(tabla, medio+1, U, clave, ppos);
 	return ob;
 	
 }
@@ -198,8 +198,12 @@ int blin(int *tabla,int P,int U,int clave,int *ppos){
 	if(!tabla || P>U || U<0) return ERR;
 	
 	*ppos = NO_ENCONTRADO;
-	for(i = P; (i <= U) && (clave!=tabla[i]); ob ++, i++);
-	*ppos = i+1;
+	for(i = P; i <= U ; ob ++, i++){
+		if(clave==tabla[i]){
+			*ppos = i+1;
+			break;
+		}
+	}
 	ob++;
 	return ob;
 }

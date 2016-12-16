@@ -54,7 +54,7 @@ int main(int argc, char** argv)
     }
   }
 
-  pdicc = ini_diccionario(tamanio,NO_ORDENADO);
+  pdicc = ini_diccionario(tamanio,ORDENADO);
 
   if (pdicc == NULL) {
     /* error */
@@ -72,7 +72,7 @@ int main(int argc, char** argv)
   }
 
   nob = insercion_masiva_diccionario(pdicc, perm, tamanio);
-
+  imprime_diccionario(pdicc);
   if (nob == ERR) {
     /* error */
     printf("Error: No se puede crear el diccionario memoria\n");
@@ -80,12 +80,12 @@ int main(int argc, char** argv)
     libera_diccionario(pdicc);
     exit(-1);
   }
+  
+  nob = busca_diccionario(pdicc,clave,&pos,bbin);
 
-  nob = busca_diccionario(pdicc,clave,&pos,blin);
-
-  if(nob >= 0) {
+  if(pos >= 0) {
     printf("Clave %d encontrada en la posicion %d en %d op. basicas\n",clave,pos,nob);
-  } else if (nob==NO_ENCONTRADO) {
+  } else if (pos==NO_ENCONTRADO) {
     printf("La clave %d no se encontro en la tabla\n",clave);
   } else {
     printf("Error al buscar la clave %d\n",clave);
